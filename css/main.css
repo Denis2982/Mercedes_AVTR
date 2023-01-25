@@ -1,0 +1,410 @@
+/*Обнуление*/
+html {
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	border: 0;
+    box-sizing: inherit;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul, ol, li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    /*height: 100%;*/
+    max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size:inherit;
+    font-weight: inherit;
+}
+@font-face {
+    font-family: 'Corporate-A-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Corporate-A-Bold.woff2') format('woff2'),
+        url('../fonts/Corporate-A-Bold.woff') format('woff');
+}
+body{
+    background: linear-gradient(180deg, #070A1B 0%, #2A3170 100%);
+	height: 100%;
+	line-height: 1.2;
+	font-size: 16px;
+	color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+} 
+/*--------------------*/
+button {
+    background-color: transparent;
+}
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+/*----------------------------------------------------------------------------*/
+.header {   
+    margin-bottom: 150px; 
+    background: #070A1B;
+}
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;  
+}
+.header__logo {
+    margin-left: 115px;
+}
+.header__nav {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.list__soc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list__item + .list__item {
+    margin-left: 30px;
+}
+.item__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;    
+    border-radius: 50%;
+    transition: 0.5s;   
+}
+.item__link:hover {
+    background: #C1A1D2;
+}
+.header__content {
+    background-image: url(../img/header/car_header.png);
+    min-height: calc(100vh - 100px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+.header__content::before {
+    content: "";
+    background-image: url(../img/header/logo_mercedes.svg);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+}
+.title {
+    margin-bottom: 5px;
+    font-family: 'Corporate-A-Bold';
+    line-height: 1.2;
+    font-size: 72px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.subtitle {
+    margin-bottom: 50px;
+    font-size: 24px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/*----------------------------------------------------------------------------*/
+.concept {
+    margin-bottom: 150px;
+}
+.concept__inner {
+    max-width: 900px;
+    margin-left: auto;
+}
+.concept__title {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-family: 'Corporate-A-Bold';
+    font-size: 18px;
+    color: #F402A2;
+}
+.concept__text {
+    font-size: 24px;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+/*----------------------------------------------------------------------------*/
+.premier {
+    margin-bottom: 150px;
+}
+.premier__inner {
+    display: flex;
+    gap: 60px;
+}
+.premier__column {
+    max-width: 570px;
+}
+.premier__text {    
+    line-height: 1.2;
+    margin-bottom: 21px;    
+}
+.premier__img {
+    margin-bottom: 20px;
+}
+
+.button__more {
+    font-family: 'Corporate-A-Bold';
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #F402A2;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid #F402A2;
+    padding: 14px;
+    transition: all 0.5s;
+}
+.button__more:hover {
+    color: #53A1CB;
+    border: 1px solid #53A1CB;
+}
+._left {
+    max-height: 400px;
+    margin-bottom: 20px;
+}
+._right {
+    max-height: 664px;
+}
+/*----------------------------------------------------------------------------*/
+.video {
+    margin-bottom: 150px;
+}
+.video__img {
+    margin-bottom: 25px;
+}
+.video__btn {
+    font-family: 'Corporate-A-Bold';
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #F402A2;
+    text-transform: uppercase;
+    border: 1px solid #F402A2;
+    padding: 14px;
+    transition: all 0.5s;
+}
+.video__btn:hover {
+    color: #53A1CB;
+    border: 1px solid #53A1CB;
+}
+.video__btn path {
+    transition: all 0.5s;
+}
+.video__btn:hover path {
+    fill: #53A1CB;
+}
+.video__btn span {
+    padding-top: 2px;
+}
+.design {
+    margin-bottom: 100px;
+}
+.design__interior {
+    display: grid;
+    grid-template-columns: 255px 255px auto 330px;
+    grid-template-rows: auto auto;
+    gap: 14px 44px;
+    margin-bottom: 100px;
+}
+.design__cell-one {
+    grid-row: 1/3;
+}
+.design__cell-two {
+    grid-row-end: -1;
+    display: flex;
+    align-items: flex-end;
+}
+.design__cell-three {
+    grid-column-end: -1;
+    grid-row-end: -1;  
+    display: flex;
+    align-items: flex-end;    
+}
+.design__img-top {
+    grid-column: 2/-1;
+}
+.section__title {
+    font-family: 'Corporate-A-Bold';
+    font-size: 18px;
+    line-height: 1.2;
+    color: #F402A2;
+}
+.design__cell-text {
+    padding-top: 25px;
+}
+.slick-track {
+    margin-left: -320px;
+}
+.design-slider {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    gap: 40px;
+}
+.arrow {
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    left: 50%;
+    width: 50px;
+}
+.arrow-left {
+    transform: translateY(10px);
+    left: 45%;
+}
+.arrow-right {
+    transform: translateY(-270px);
+    left: 51%;
+}
+.design__box {
+    margin: 150px auto;
+    max-width: 590px;
+    padding: 0 10px;
+    display: flex;
+    gap: 60px;
+}
+.design__box-text {
+    margin-bottom: 15px;
+}
+.design__box-column {
+    width: 255px;
+}
+.end__img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+    margin: 0 auto;
+}
+/*----------------------------------------------------------------------------*/
+.footer {
+    background: #070A1B;
+}
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+}
+/*----------------------------------------------------------------------------*/
+@media(max-width: 1020px) {
+    .design__interior {
+        display: block;
+        margin-bottom: 70px;
+    }
+    .design__cell-two {
+        margin-bottom: 20px;
+    }   
+}
+
+@media(max-width: 800px) {
+    .header__logo {
+        margin-left: 50px;        
+    }
+    .title {
+        font-size: 60px;
+    }
+    .concept__text {
+        font-size: 18px;
+    }
+    .header, .concept, .premier, .video {
+        margin-bottom: 120px;
+    }
+    ._left {
+        max-height: 300px;
+    }
+    ._right {
+        max-height: 600px;
+    }
+    .design__box {
+        margin: 100px auto;
+    }
+    .footer__inner {
+        flex-direction: column;
+        max-height: 200px;
+        gap: 50px;
+    }
+    .footer {
+        padding: 20px;
+    }
+} 
+
+@media(max-width: 600px) {
+    .header__logo {
+        margin-left: 10px;        
+    }
+    .title {
+        font-size: 40px;
+    }
+    .subtitle {
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+    .list__item + .list__item {
+        margin-left: 10px;
+    } 
+    .header, .concept, .premier, .video {
+        margin-bottom: 100px;
+    }
+    .premier__inner {
+        flex-wrap: wrap;
+    }
+    .premier__column {
+        display: flex;
+        flex-direction: column;
+    }
+    .design__box {
+        margin: 70px auto;
+    }
+    .design {
+        margin-bottom: 80px;
+    }
+}
+
+@media(max-width: 500px) {
+    ._top {
+        width: 25px;
+        height: 25px;
+    }
+    .logo__img {
+        width: 200px;
+    }
+    .title {
+        font-size: 35px;
+    }
+    .header, .concept, .premier, .video {
+        margin-bottom: 70px;
+    }
+    .design__box {
+        margin: 50px auto;
+    }
+    .design {
+        margin-bottom: 60px;
+    }
+}
